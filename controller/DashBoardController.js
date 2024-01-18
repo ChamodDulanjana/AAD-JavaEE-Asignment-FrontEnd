@@ -8,8 +8,8 @@ export class DashBoardController {
 
     handleTableLoad() {
 
-        /*$.ajax({
-            url: "http://localhost:8080/Web_Pos_Backend/query",
+        $.ajax({
+            url: "http://localhost:8080/JavaEE_Assignment1_BackEnd/query",
             type: "GET",
             dataType: "json",
             headers: {
@@ -23,12 +23,12 @@ export class DashBoardController {
             error: (xhr) => {
                 console.log(xhr);
             }
-        });*/
+        });
     }
 
     handleAddRecentData(array){
 
-        /*$('#orderDetailTbl tbody tr').remove();
+        $('#orderDetailTbl tbody tr').remove();
 
         array.map(value => {
 
@@ -42,13 +42,13 @@ export class DashBoardController {
                 "</tr>";
 
             $('#orderDetailTbl tbody').prepend(row);
-        });*/
+        });
     }
 
     handleLabelData() {
 
-        /*$.ajax({
-            url: "http://localhost:8080/Web_Pos_Backend/customer",
+        $.ajax({
+            url: "http://localhost:8080/JavaEE_Assignment1_BackEnd/customer",
             type: "GET",
             dataType: "json",
             headers: {
@@ -79,13 +79,13 @@ export class DashBoardController {
             }
         });
         $('#todayOrders').text(count);
-        $('#todayIncome').text("Rs  " + todayIncome);*/
+        $('#todayIncome').text("Rs  " + todayIncome);
     }
 }
 
 export function handleRefreshAll() {
-    /*dashBoardController.handleLabelData();
-    dashBoardController.handleTableLoad();*/
+    dashBoardController.handleLabelData();
+    dashBoardController.handleTableLoad();
 }
 
 let dashBoardController = new DashBoardController();

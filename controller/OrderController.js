@@ -38,8 +38,8 @@ export class OrderController {
 
     handleOrderID() {
 
-        /*$.ajax({
-            url: "http://localhost:8080/Web_Pos_Backend/order",
+        $.ajax({
+            url: "http://localhost:8080/JavaEE_Assignment1_BackEnd/order",
             type: "GET",
             dataType: "json",
             headers: {
@@ -59,23 +59,23 @@ export class OrderController {
             error: (xhr,x,xs) => {
                 console.log(xs);
             }
-        });*/
+        });
     }
 
     handDateTime() {
 
-        /*let date = new Date();
+        let date = new Date();
         let month = eval(date.getMonth() + 1).toString();
         let day = date.getDate().toString();
         day = day.length === 1 ? "0"+day : day;
         month = month.length === 1 ? "0"+month : month;
-        $('#date').text(date.getFullYear()+ "-" + month + "-" + day);*/
+        $('#date').text(date.getFullYear()+ "-" + month + "-" + day);
     }
 
     handleLoadCustomerID(){
 
-        /*$.ajax({
-            url: "http://localhost:8080/Web_Pos_Backend/customer",
+        $.ajax({
+            url: "http://localhost:8080/JavaEE_Assignment1_BackEnd/customer",
             type: "GET",
             dataType: "json",
             headers: {
@@ -91,13 +91,13 @@ export class OrderController {
             error: (xhr) => {
                 console.log(xhr);
             }
-        });*/
+        });
     }
 
     handleLoadItemCode(){
 
-        /*$.ajax({
-            url: "http://localhost:8080/Web_Pos_Backend/item",
+        $.ajax({
+            url: "http://localhost:8080/JavaEE_Assignment1_BackEnd/item",
             type: "GET",
             dataType: "json",
             headers: {
@@ -115,13 +115,13 @@ export class OrderController {
             }
         });
 
-        document.getElementById('orderDeleteBtn').style.display = "none";*/
+        document.getElementById('orderDeleteBtn').style.display = "none";
     }
 
     handleCustomerDetails(id) {
 
-        /*$.ajax({
-            url: "http://localhost:8080/Web_Pos_Backend/customer",
+        $.ajax({
+            url: "http://localhost:8080/JavaEE_Assignment1_BackEnd/customer",
             type: "GET",
             dataType: "json",
             headers: {
@@ -144,13 +144,13 @@ export class OrderController {
             error: (xhr) => {
                 console.log(xhr);
             }
-        });*/
+        });
     }
 
     handleItemDetails(itemCode) {
 
-        /*$.ajax({
-            url: "http://localhost:8080/Web_Pos_Backend/item",
+        $.ajax({
+            url: "http://localhost:8080/JavaEE_Assignment1_BackEnd/item",
             type: "GET",
             dataType: "json",
             headers: {
@@ -173,7 +173,7 @@ export class OrderController {
             error: (xhr) => {
                 console.log(xhr);
             }
-        });*/
+        });
     }
 
     handleValidation() {
@@ -187,7 +187,7 @@ export class OrderController {
 
     handleUpdateItem() {
 
-        /*let index = order_item_arr.findIndex(value => value.item.itemCode === selectedItemCode);
+        let index = order_item_arr.findIndex(value => value.item.itemCode === selectedItemCode);
 
         if ( parseInt($('#qty').val()) > parseInt($('#qty_on_hand').text())) {
 
@@ -202,12 +202,12 @@ export class OrderController {
         $('#orderAddBtn').text('Add'), $('#addBtn').css({background: '#0d6efd', border: '#0d6efd'});
 
         this.handleLoadTable();
-        this.handleClearFunction();*/
+        this.handleClearFunction();
     }
 
     handleAddItem(){
 
-        /*let index = this.handleIsExists();
+        let index = this.handleIsExists();
 
         if (index === -1) {
 
@@ -227,12 +227,12 @@ export class OrderController {
 
         document.getElementById('customerCmb').disabled = true;
         this.handleLoadTable();
-        this.handleClearFunction();*/
+        this.handleClearFunction();
     }
 
     handleClearFunction(){
 
-        /*document.getElementById("itemCodeCmb").selectedIndex = 0;
+        document.getElementById("itemCodeCmb").selectedIndex = 0;
         document.getElementById('orderDeleteBtn').style.display = "none";
         $('#orderAddBtn').text('Add');
         $('#orderAddBtn').css({background: '#0d6efd', border: '#0d6efd'});
@@ -242,7 +242,7 @@ export class OrderController {
         $('#unit_price').text(".");
         $('#qty').val("");
 
-        this.handleItemLabelColor('#fff');*/
+        this.handleItemLabelColor('#fff');
 
     }
 
@@ -255,7 +255,7 @@ export class OrderController {
 
     handleDeleteItem(){
 
-        /*order_item_arr.splice(order_item_arr.findIndex(value => value._item.itemCode === selectedItemCode), 1);
+        order_item_arr.splice(order_item_arr.findIndex(value => value._item.itemCode === selectedItemCode), 1);
 
         this.handleLoadTable();
         this.handleClearFunction();
@@ -266,18 +266,18 @@ export class OrderController {
             $('#customer_name').text(".");
             $('#customer_address').text(".");
             $('#customer_contact').text(".");
-        }*/
+        }
     }
 
     handleIsExists() {
 
-        // return order_item_arr.findIndex(value => value._item.itemCode === $('#itemCodeCmb :selected').text());
+        return order_item_arr.findIndex(value => value._item.itemCode === $('#itemCodeCmb :selected').text());
 
     }
 
     handleSaveOrder() {
 
-        /*if (order_item_arr.length === 0) {
+        if (order_item_arr.length === 0) {
             alert("Please add the order details first !");
             return;
         }
@@ -291,7 +291,7 @@ export class OrderController {
         let obj = JSON.stringify(new Order($('#order_id').text(), cus.id, $('#date').text(), itemArray));
 
         $.ajax({
-            url: "http://localhost:8080/Web_Pos_Backend/order",
+            url: "http://localhost:8080/JavaEE_Assignment1_BackEnd/order",
             type: "POST",
             data: obj,
             dataType: "json",
@@ -309,7 +309,7 @@ export class OrderController {
             error: (xhr) => {
                 console.log(xhr);
             }
-        });*/
+        });
     }
 
     handleReloadDetails(){

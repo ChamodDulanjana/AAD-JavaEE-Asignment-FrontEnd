@@ -60,7 +60,7 @@ export class ItemController{
 
     handleUpdateItem(){
 
-       /* let obj= JSON.stringify(new Item($('#itmCode').val(), $('#itmDes').val(), $('#unitPrice').val(), $('#itmQty').val()));
+        let obj= JSON.stringify(new Item($('#itmCode').val(), $('#itmDes').val(), $('#unitPrice').val(), $('#itmQty').val()));
 
         $.ajax({
             url: "http://localhost:8080/JavaEE_Assignment1_BackEnd/item",
@@ -81,12 +81,12 @@ export class ItemController{
             error: (xhr) => {
                 console.log(xhr);
             }
-        });*/
+        });
     }
 
     handleDeleteItem(){
 
-        /*$.ajax({
+        $.ajax({
             url: "http://localhost:8080/JavaEE_Assignment1_BackEnd/item?itemCode="+$('#itmCode').val(),
             type: "DELETE",
             dataType: "json",
@@ -105,7 +105,7 @@ export class ItemController{
             error: (xhr) => {
                 console.log(xhr);
             }
-        });*/
+        });
     }
 
     handleLoadItem(){
@@ -171,7 +171,7 @@ export class ItemController{
 
     handleSearchItem(){
 
-        /*if (!$('#itmSearch').val()){
+        if (!$('#itmSearch').val()){
             this.handleLoadItem();
             return;
         }
@@ -192,7 +192,7 @@ export class ItemController{
             error: (xhr) => {
                 console.log(xhr);
             }
-        });*/
+        });
     }
 
     handleGetMatch(newArray, text, itemArray){

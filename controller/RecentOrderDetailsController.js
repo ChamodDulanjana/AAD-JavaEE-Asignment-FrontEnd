@@ -28,8 +28,8 @@ export class RecentOrderDetailsController {
 
     handleLoadTable() {
 
-        /*$.ajax({
-            url: "http://localhost:8080/Web_Pos_Backend/query",
+        $.ajax({
+            url: "http://localhost:8080/JavaEE_Assignment1_BackEnd/query",
             type: "GET",
             dataType: "json",
             headers: {
@@ -42,7 +42,7 @@ export class RecentOrderDetailsController {
             error: (xhr) => {
                 console.log(xhr);
             }
-        });*/
+        });
 
     }
 

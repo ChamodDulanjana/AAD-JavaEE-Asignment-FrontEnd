@@ -34,7 +34,7 @@ export class CustomerController {
 
     handleSaveCustomer() {
 
-        /*let obj = JSON.stringify(new Customer($('#id').val(), $('#name').val(), $('#address').val(), $('#tel').val()));
+        let obj = JSON.stringify(new Customer($('#id').val(), $('#name').val(), $('#address').val(), $('#tel').val()));
 
         $.ajax({
             url: "http://localhost:8080/JavaEE_Assignment1_BackEnd/customer",
@@ -56,12 +56,12 @@ export class CustomerController {
             error: (xhr) => {
                 console.log(xhr);
             }
-        });*/
+        });
     }
 
     handleUpdateCustomer() {
 
-        /*let obj = JSON.stringify(new Customer($('#id').val(), $('#name').val(), $('#address').val(), $('#tel').val()));
+        let obj = JSON.stringify(new Customer($('#id').val(), $('#name').val(), $('#address').val(), $('#tel').val()));
 
         $.ajax({
             url: "http://localhost:8080/JavaEE_Assignment1_BackEnd/customer",
@@ -82,12 +82,12 @@ export class CustomerController {
             error: (xhr) => {
                 console.log(xhr);
             }
-        });*/
+        });
     }
 
     handleDeleteCustomer() {
 
-        /*$.ajax({
+        $.ajax({
             url: "http://localhost:8080/JavaEE_Assignment1_BackEnd/customer?customerID="+$('#id').val(),
             type: "DELETE",
             dataType: "json",
@@ -106,13 +106,13 @@ export class CustomerController {
             error: (xhr) => {
                 console.log(xhr);
             }
-        });*/
+        });
     }
 
 
     handleLoadCustomer() {
 
-        /*$.ajax({
+        $.ajax({
             url: "http://localhost:8080/JavaEE_Assignment1_BackEnd/customer",
             type: "GET",
             dataType: "json",
@@ -137,7 +137,7 @@ export class CustomerController {
         $('#name').val("");
         $('#address').val("");
         $('#tel').val("");
-        document.getElementById('id').disabled = false;*/
+        document.getElementById('id').disabled = false;
     }
 
     handleAddData(array) {
@@ -173,7 +173,7 @@ export class CustomerController {
 
     handleSearchCustomer() {
 
-        /*if (!$('#cusSearch').val()) {
+        if (!$('#cusSearch').val()) {
             this.handleLoadCustomer();
             return;
         }
@@ -194,7 +194,7 @@ export class CustomerController {
             error: (xhr) => {
                 console.log(xhr);
             }
-        });*/
+        });
     }
 
     handleGetMatch(newArray, text, cusArray){
@@ -212,12 +212,12 @@ export class CustomerController {
 
     handleLReloadCustomerDetails() {
 
-        /*$(document).on('click', (event) => {
+        $(document).on('click', (event) => {
             if (event.target.className === 'form-control me-2 was-validated search')
                 setTimeout(() => {
                     if (!$('#cusSearch').val()) this.handleLoadCustomer();
                 });
-        });*/
+        });
     }
 }
 
